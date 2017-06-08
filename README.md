@@ -6,7 +6,8 @@
  
 #### We want to use extractive industry contracts to build an anomaly detection model which alerts when an incoming contract is different from a standard contract so that the organizations who are reviewing contracts for governance purposes can prioritize their work by weeding out standard contracts and/or standard contract sections.
 
-Process
+Process:
+
     1. Ingest corpus of contracts
     2. Label with language, country and contract type (mineral, oil, natural gas)
     3. Have SMEs label any contracts they know are anomalous or unfair as a hold-out set for testing

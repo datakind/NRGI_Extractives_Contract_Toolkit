@@ -8,16 +8,16 @@
 
 #### Process
 
-    1. Ingest corpus of contracts
-    2. Label with language, country and contract type (mineral, oil, natural gas)
-    3. Have SMEs label any contracts they know are anomalous or unfair as a hold-out set for testing
-    4. Build model (potentially Isolation Forest or fine-tune a distance metric)
-    5. Test against known anomalies
-    6. Enrich contract metadata
-        a. Topic modeling
-        b. Subject tags
-        c. Named entities
-        d. User log data time series, locations
-        e. Boolean search terms (confidentiality, exemption)
-        f. Contract tone (Bloomberg research on harshness)
-        g. Contracts with redactions - From Rob Pitman: “It would be great to put together a definitive list of all the contracts in resourcecontracts.org that have redactions and analyse what terms companies (or their law firms) plan to keep out of the public realm.”
+####    1. Ingest corpus of contracts
+####    2. Label with language, country and contract type (mineral, oil, natural gas)
+####    3. Have SMEs label any contracts they know are anomalous or unfair as a hold-out set for testing
+####    4. Build model (potentially Isolation Forest or fine-tune a distance metric)
+####    5. Test against known anomalies
+####    6. Enrich contract metadata
+####        a. Topic modeling
+####        b. Subject tags
+####        c. Named entities
+####        d. User log data time series, locations
+####        e. Boolean search terms (confidentiality, exemption)
+####        f. Contract tone (Bloomberg research on harshness)
+####        g. Contracts with redactions - From Rob Pitman: “It would be great to put together a definitive list of all the contracts in resourcecontracts.org that have redactions and analyse what terms companies (or their law firms) plan to keep out of the public realm.”

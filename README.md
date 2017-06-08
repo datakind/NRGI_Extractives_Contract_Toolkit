@@ -1,12 +1,13 @@
 ## Omidyar Extractive Industry Fiscal Governance
 ### Project 1: Contract Anomaly Detection and Metadata Enhancement
-### Project Summary
+### Project Summary:
  
 #### Organizations like the Natural Resource Governance Institute must read 100+ page legal contracts in full in order to find any clauses which may be unfair. This is a time-consuming manual process. Additionally, the term unfair is highly subjective and many are hesitant to use the term in public, however, having a measurement of non-standard is very helpful.  
  
 #### We want to use extractive industry contracts to build an anomaly detection model which alerts when an incoming contract is different from a standard contract so that the organizations who are reviewing contracts for governance purposes can prioritize their work by weeding out standard contracts and/or standard contract sections.
 
 #### Process
+
     1. Ingest corpus of contracts
     2. Label with language, country and contract type (mineral, oil, natural gas)
     3. Have SMEs label any contracts they know are anomalous or unfair as a hold-out set for testing

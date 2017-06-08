@@ -1,3 +1,21 @@
 ## Omidyar Extractive Industry Fiscal Governance
-### Project 1: Perceptions and interpretation of contracts
-#### We want to use SEC reports and the GDELT database to create sentiment data about extractives projects (such as riskiness, unpredictability, environmental impact, cost overruns), so that we add additional context to the disclosed project payment data, so that we can better understand the impact of extractives projects in highly corrupt countries and we can identify projects that have been associated with negative sentiment and interpret the payment data in that context. 
+### Project 1: Contract Anomaly Detection and Metadata Enhancement
+### Project Summary
+ 
+#### Organizations like the Natural Resource Governance Institute must read 100+ page legal contracts in full in order to find any clauses which may be unfair. This is a time-consuming manual process. Additionally, the term unfair is highly subjective and many are hesitant to use the term in public, however, having a measurement of non-standard is very helpful.  
+ 
+#### We want to use extractive industry contracts to build an anomaly detection model which alerts when an incoming contract is different from a standard contract so that the organizations who are reviewing contracts for governance purposes can prioritize their work by weeding out standard contracts and/or standard contract sections.
+
+1. Ingest corpus of contracts
+2. Label with language, country and contract type (mineral, oil, natural gas)
+3. Have SMEs label any contracts they know are anomalous or unfair as a hold-out set for testing
+4. Build model (potentially Isolation Forest or fine-tune a distance metric)
+5. Test against known anomalies
+6. Enrich contract metadata
+ - Topic modeling
+- Subject tags
+- Named entities
+- User log data time series, locations
+- Boolean search terms (confidentiality, exemption)
+- Contract tone (Bloomberg research on harshness)
+- Contracts with redactions - From Rob Pitman: “It would be great to put together a definitive list of all the contracts in resourcecontracts.org that have redactions and analyse what terms companies (or their law firms) plan to keep out of the public realm.”

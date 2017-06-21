@@ -10,7 +10,7 @@
 
 ### 1. Extract Contracts
 
- - Extracts contract text using urls to pdf documents contained in contract metadata file downloaded from <resourcecontracts.org/contracts>
+ - Extracts contract text using urls to pdf documents contained in contract metadata file downloaded from http://www.resourcecontracts.org/contracts
  - Appends contract text to original contract metadata file and pickles dataframe for analysis
 
 ### 2. Clean Contract Text

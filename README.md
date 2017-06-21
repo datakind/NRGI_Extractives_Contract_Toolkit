@@ -1,4 +1,3 @@
-![alt text](https://pbs.twimg.com/profile_images/458395751433789440/tB_OOPH7_400x400.png)
 # Omidyar Extractive Industry Fiscal Governance
 ## Project 1: Contract Anomaly Detection and Metadata Enhancement
 ### Project Summary

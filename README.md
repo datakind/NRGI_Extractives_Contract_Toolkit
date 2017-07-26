@@ -29,11 +29,11 @@
  - Reads in contract text
  - Strips HTML from text
  - Cleans text for NLP prep (remove unicode, special characters, stopwords, etc.)
- - Outputs cleaned text appended to dataframe from Notebook 1
+ - Outputs cleaned text appended to original dataframe
 
 ### 5. Exploratory Data Analysis (Optional)
 
- - Reads in contract text and original metadata from Notebook 2
+ - Reads in contract text and original metadata
  - Computes basic stats on text and original metadata
  - Does language detection
  - Does topic modeling on text
@@ -41,14 +41,14 @@
 
 ### 6. Metadata Creation
 
- - Reads in contract text and original metadata dataframe from Notebook 2
+ - Reads in contract text and original metadata dataframe
  - Computes various metadata fields including 
  	- Auto-generated original metadata fields
  	- Subject tags
  	- Named entities
  	- Presence of boolean search terms (confidentiality, exemption, stabilization clause, redactions)
  	- Basic stats on text
-  - Outputs results appended to dataframe from Notebook 2
+  - Outputs results appended to original dataframe
 
 ### 7. Rolling Hash Function
 
@@ -56,8 +56,8 @@
 
  ### 8. Anomaly Detection
 
-  - Reads in contract text and metadata dataframe from Notebook 4
+  - Reads in contract text and metadata dataframe
   - Runs anomaly detection and alerts on:
   	- Anomalous / non-standard contract sections
   	- Missing standard sections which should be present
-  - Output results appended to dataframe from Notebook 4
+  - Output results appended to original dataframe

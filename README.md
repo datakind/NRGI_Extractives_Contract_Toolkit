@@ -14,14 +14,24 @@
  - Extracts contract text using urls to pdf documents contained in contract metadata file downloaded from http://www.resourcecontracts.org/contracts
  - Appends contract text to original contract metadata file and pickles dataframe for analysis
 
-### 2. Clean Contract Text
+### 2. Get Contracts Backlog
+
+ - From scraped text from Colombian oil contract website, found pdf links and output list of links to pdf files
+ - Takes the list of pdf links and downloads files to directory
+
+### 3. OCR Contracts
+
+ - From a directory of PDFs, performs OCR
+ - Outputs results of OCR to txt files in same directory
+
+### 4. Clean Contract Text
 
  - Reads in contract text
  - Strips HTML from text
  - Cleans text for NLP prep (remove unicode, special characters, stopwords, etc.)
  - Outputs cleaned text appended to dataframe from Notebook 1
 
-### 3. Exploratory Data Analysis (Optional)
+### 5. Exploratory Data Analysis (Optional)
 
  - Reads in contract text and original metadata from Notebook 2
  - Computes basic stats on text and original metadata
@@ -29,7 +39,7 @@
  - Does topic modeling on text
  - Creates descriptive charts and graphs
 
-### 4. Metadata Creation
+### 6. Metadata Creation
 
  - Reads in contract text and original metadata dataframe from Notebook 2
  - Computes various metadata fields including 
@@ -40,7 +50,11 @@
  	- Basic stats on text
   - Outputs results appended to dataframe from Notebook 2
 
- ### 5. Anomaly Detection
+### 7. Rolling Hash Function
+
+  - Function to segment documents prior to clustering
+
+ ### 8. Anomaly Detection
 
   - Reads in contract text and metadata dataframe from Notebook 4
   - Runs anomaly detection and alerts on:

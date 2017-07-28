@@ -21,7 +21,7 @@ txt_files = [unicodedata.normalize('NFKC',f.decode('utf8')) for f in os.listdir(
 
 # ### Perform OCR on PDFs
 def ocr_pdf_to_text(filename):
-    
+
     tool = pyocr.get_available_tools()[0]
     lang = 'spa'
     req_image = []
@@ -42,10 +42,7 @@ def ocr_pdf_to_text(filename):
         final_text.append(txt)
     return final_text
 
-
-
 for filename in tqdm(pdfs):
-
     txt_file = filename[:-3] +'txt'
     txt_filename = destination_folder + txt_file
 

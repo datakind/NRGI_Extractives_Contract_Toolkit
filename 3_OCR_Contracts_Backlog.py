@@ -21,12 +21,14 @@ txt_files = [unicodedata.normalize('NFKC',f.decode('utf8')) for f in os.listdir(
 
 # ### Perform OCR on PDFs
 def ocr_pdf_to_text(filename):
+    
     tool = pyocr.get_available_tools()[0]
     lang = 'spa'
     req_image = []
     final_text = []
     image_pdf = Image(filename=filename, resolution=300)
     image_jpeg = image_pdf.convert('jpeg')
+
     for img in image_jpeg.sequence:
         img_page = Image(image=img)
         req_image.append(img_page.make_blob('jpeg'))
@@ -46,12 +48,11 @@ for filename in tqdm(pdfs):
 
     txt_file = filename[:-3] +'txt'
     txt_filename = destination_folder + txt_file
-    if not txt_file in txt_files: 
 
+    if not txt_file in txt_files: 
         print 'Converting ' + filename 
 
         try:
-
             ocr_txt = ocr_pdf_to_text(destination_folder + filename)
             with open(txt_filename,'w') as f:
                 for i in range(len(ocr_txt)):

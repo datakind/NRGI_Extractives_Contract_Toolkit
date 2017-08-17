@@ -1,4 +1,4 @@
 .ipynb_checkpoints/
 .DS_Store
-contract_data/
+contract_data/*
 _docRabin*

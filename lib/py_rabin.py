@@ -70,3 +70,59 @@ def test_rabin_partition(strlength=3e5,iter=20):
     for _ in tqdm(xrange(iter)): 
           rabin_partition(longstr_rand)
     return
+
+def example_rabin_partition():
+    
+    ## document 1
+    longstr1 = \
+    "Membership of the Union of Soviet Socialist Republics in the United Nations, \
+    including the Security Council and all other organs and organizations of the United Nations system, \
+    is being continued by the Russian Federation (RSFSR) with the support of the countries of the Commonwealth of \
+    Independent States. In this connection, I request that the name 'Russian Federation' should be used in the United \
+    Nations in place of the name 'the Union of Soviet Socialist Republics'. The Russian Federation maintains full \
+    responsibility for all the rights and obligations of the USSR under the Charter of the United Nations, including \
+    the financial obligations. I request that you consider this letter as confirmation of the credentials to represent \
+    the Russian Federation in United Nations organs for all the persons currently holding the credentials of representatives \
+    of the USSR to the United Nations."
+
+    ## document 2: minor changes inserted into document 1
+    longstr2 = \
+    "Membership of the Union of Soviet Socialist Republics in the United Nations, \
+    including the Security Council and all other organs and organizations of the United Nations system, \
+    is being continued by the Russian Federation (RSFSR) with the support of the countries of the Commonwealth of \
+    Independent States. In this connection, I request that the name 'Russian Federation' should be used in the United \
+    Nations in place of the name 'the ---XXX--- Union of Soviet Socialist Republics'. The Russian Federation maintains full \
+    responsibility for all the rights ---|||--- and obligations of the USSR under the Charter of the United Nations, including \
+    the financial obligations. I request that you consider this letter as confirmation of the credentials to represent \
+    the Russian Federation in United ---ZZZ--- Nations organs for all the persons currently holding the credentials of representatives \
+    of the USSR to the United Nations."
+    
+    minchunk,avgchunk,maxchunk=4,16,32
+    a = set(rabin_partition(longstr1,avgchunk,minchunk,maxchunk))
+    b = set(rabin_partition(longstr2,avgchunk,minchunk,maxchunk))
+    
+    print 
+    print "EXAMPLE USE CASE: DOCUMENT SIMILARITY"
+    print 
+
+    print
+    print "Example text 1"
+    print longstr1
+    print
+
+    print 
+    print "Example text 2"
+    print  longstr2
+    print 
+
+    print 
+    print "Percent similarity between document 1 and 2: \n%0.2f%%"%( 100.*len(a&b)/float(min(len(a),len(b))) )
+
+    print 
+    print "Common rabin chunks between documents 1 and 2:"
+    print [k for k in rabin_partition(longstr1) if k in rabin_partition(longstr2)]
+
+    print 
+    print "Non-common rabin chunks between document 1 and 2:"
+    print [k for k in rabin_partition(longstr1) if k not in rabin_partition(longstr2)]
+    print 

@@ -9,17 +9,17 @@
 
 ### Notebook Summary
 
-### 1a - Extract Contracts
+### 1a. Extract Contracts
 
  - Extracts contract text using urls to pdf documents contained in contract metadata file downloaded from http://www.resourcecontracts.org/contracts
  - Appends contract text to original contract metadata file and pickles dataframe for analysis
 
-### 1b - Extract Contract Backlog
+### 1b. Extract Contract Backlog
 
  - From scraped text from Colombian oil contract website, found pdf links and output list of links to pdf files
  - Takes the list of pdf links and downloads files to directory
 
-### 1c - Extract Contract Annotations 
+### 1c. Extract Contract Annotations 
 
  - Downloads annotation excel files
 

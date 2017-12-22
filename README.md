@@ -1,6 +1,3 @@
-### Sprint Review Agenda (remove prior to handoff)
-https://docs.google.com/document/d/1ccNxLo6YLWrgBrOID8Dr9koZUWSeI0wIZ9CE30FjqyY/edit
-
 ![alt text](NRGI_logo.jpg)
 # Omidyar Extractive Industry Fiscal Governance
 ## Project 1: Contract Anomaly Detection and Metadata Enhancement

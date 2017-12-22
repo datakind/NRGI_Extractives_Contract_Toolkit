@@ -1,11 +1,15 @@
 ![alt text](NRGI_logo.jpg)
-# Omidyar Extractive Industry Fiscal Governance
-## Project 1: Contract Anomaly Detection and Metadata Enhancement
+# Extractives Contract Toolkit
+
 ### Project Summary
  
-#### Those working on extractive industry governance aim to help local communities benefit from their countries’ endowments of oil, gas and minerals. One of the ways they do this is by assessing 100+ page extractives industry legal contracts for things like fiscal governance and environmental reparations, but this is a time-consuming, manual and subjective process, usually performed by legal experts. Automatic generation of metadata and annotations would allow those reviewing the contracts (including those without legal training) to quickly find relevant contracts and clauses within those contracts in order to focus on what is different about one contract compared to a standard contract and make their assessment based on a higher-level analysis of metadata as opposed to an extensive word-for-word comparative review.
+#### Those working on extractive industry governance aim to help local communities benefit from their countries’ endowments of oil, gas and minerals. One of the ways they do this is by assessing 100+ page extractives industry legal contracts for things like fiscal governance and environmental reparations, but this is a time-consuming, manual and subjective process, usually performed by legal experts. Automatic generation of annotations would allow those reviewing the contracts (including those without legal training) to quickly find relevant contracts and clauses within those contracts in order to focus on what is different about one contract compared to a template contract and make their assessment based on a higher-level analysis of metadata as opposed to an extensive word-for-word comparative review.
  
 #### We will leverage publicly available extractive industry contracts to extract data using natural language processing techniques and then train a suite of machine learning models to assist legal reviewers, journalists, regulators and community activists.
+
+### Objective 1: Identify and tag legal clauses within contracts. 
+
+### Objective 2: Create a comparison tool which shows the difference between an incoming contract and a selected template
 
 ### Notebook Summary
 

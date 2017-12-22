@@ -57,10 +57,6 @@
  - Predicts clause types based on pickled model from 4b
  - Outputs prediction results to csv file
 
-### 6b. Annotation Tag Classifer
-
- - Performs Binary classification of contract clause types
-
 ### 7. Rolling Hash Function
 
   - Hash-based partitition function for segmenting documents prior to clustering

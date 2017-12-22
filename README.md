@@ -23,48 +23,43 @@
 
  - Downloads annotation excel files
 
-### 2. OCR Contracts Backlog
+### 2. OCR Contract Backlog
 
  - From a directory of PDFs, performs OCR
  - Outputs results of OCR to txt files in same directory
 
-### 3. Clean Text
+### 3a. Munge Contract Annotations
 
  - Reads in contract text
  - Strips HTML from text
- - Cleans text for NLP prep (remove unicode, special characters, stopwords, etc.)
  - Outputs cleaned text appended to original dataframe
 
-### 4. Contract EDA
+### 3b. Munge and Clean Raw Contract Text
 
- - Reads in contract text and original metadata from Notebook 2
- - Computes basic stats on text and original metadata
- - Does topic modeling on text
- - Creates explanatory charts and graphs
+ - Reads in contract text
+ - Parses by paragraph
+ - Strips HTML from text
+ - Outputs text by paragraph
 
-### 5. Metadata Creation
-
-
-- Reads in contract text and original metadata dataframe
- - Computes various metadata fields including 
- 	- Auto-generated original metadata fields
- 	- Subject tags
- 	- Named entities
- 	- Presence of boolean search terms (confidentiality, exemption, stabilization clause, redactions)
- 	- Basic stats on text
-  - Outputs results appended to original dataframe
+### 4a. Multiclass Classifier Grid Search
  
- ### 6a. Annoation Tag Classifier Grid Search
-  
-  - Performs grid search for binary classification of Stabilization and Royalties clauses
+ - Search for optimal parameters for our classifier and clause types
+ - In this case the model was tuned for high recall so as to minimize false negatives
+
+### 4b. Multiclass Classifier
+ 
+ - Performs classification of selected clause types
+
+
+### 5. Featurize and Predict Unannotated Corpus
+
+ - Cleans and featurizes raw text
+ - Predicts clause types based on pickled model from 4b
+ - Outputs prediction results to csv file
 
 ### 6b. Annotation Tag Classifer
 
  - Performs Binary classification of contract clause types
-
-### 6c. Annotation Tag Multiclass Classifier 
-
- - Performs Multiclass Classifier for contract clause types
 
 ### 7. Rolling Hash Function
 
